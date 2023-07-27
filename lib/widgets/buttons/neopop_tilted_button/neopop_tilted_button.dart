@@ -252,8 +252,8 @@ class _NeoPopTiltedButtonState extends State<NeoPopTiltedButton>
     button = ClipPath(
       clipper: NeoPopTiltedButtonClipper(
         depth: widget.buttonDepth ?? kTiltedButtonDepth,
-        plunkAngle: kTiltedButtonPlunkAngle,
-        tiltAngle: kTiltedButtonAngle,
+        plunkAngle: widget.tiltedButtonPlunkAngle ?? kTiltedButtonPlunkAngle,
+        tiltAngle: widget.tiltedButtonAngle ?? kTiltedButtonAngle,
       ),
       child: button,
     );
@@ -311,7 +311,7 @@ class _NeoPopTiltedButtonState extends State<NeoPopTiltedButton>
           isComplex: true,
           painter: NeoPopTiltedBtnShadowPainter(
             color: decoration.shadowColor,
-            tiltAngle: kTiltedButtonAngle,
+            tiltAngle: widget.tiltedButtonAngle ?? kTiltedButtonAngle,
             yOffset: animation,
             posFactor: posFactor,
             shadowDistance: widget.shadowDistance,
