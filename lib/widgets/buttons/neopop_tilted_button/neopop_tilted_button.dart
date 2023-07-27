@@ -240,7 +240,7 @@ class _NeoPopTiltedButtonState extends State<NeoPopTiltedButton>
         color: enabled ? decoration.color : decoration.disabledColor,
         depth: widget.buttonDepth ?? kTiltedButtonDepth,
         plunkAngle: widget.tiltedButtonPlunkAngle ?? kTiltedButtonPlunkAngle,
-        tiltAngle: kTiltedButtonAngle,
+        tiltAngle: widget.tiltedButtonAngle ?? kTiltedButtonAngle,
         buttonBorder: decoration.border,
         plunkColor:
             enabled ? decoration.plunkColor : decoration.disabledPlunkColor,
